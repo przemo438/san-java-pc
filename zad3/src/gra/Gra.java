@@ -16,6 +16,7 @@ public class Gra {
 		        while (wynik==false)
 				{
 		        	System.out.print("Wpisz liczbê z zakresu 0-100: ");
+		        	try {
 		        	int zgadnij = Integer.parseInt(reader.readLine());
 		        	if(zgadnij==liczba)
 					{
@@ -36,6 +37,10 @@ public class Gra {
 		        		wynik=false;
 		        		ktory_raz++;
 		        	}
+		        	} 
+		        	catch (NumberFormatException e){
+		        	System.out.println("Podany znak nie jest liczb¹!");
+		        	}	
 		        }
 		        System.out.println("Uda³o siê za "+ktory_raz+" razem.");
 	}	
